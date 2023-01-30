@@ -1,0 +1,20 @@
+
+<table>
+	<thead>
+		<tr>
+			<th>Coins</th>
+			<th>Rupee</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr> 
+
+			<td><%= @jokes["type"]%></td></tr>
+			<td><%= @jokes["setup"]%></td></tr>
+			<td><%= @jokes["punchline"]%></tr>
+		</tr>
+		<%#end%>
+	</tbody>
+</table>
+		<%= link_to "Store data base", users_store_api_data_path(@jokes) %></br>
+		<%= link_to "show_store_data", users_show_store_data_path %>

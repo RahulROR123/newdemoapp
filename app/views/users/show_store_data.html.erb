@@ -1,0 +1,22 @@
+  <%=form_with url: "/users/show_store_data",method: :get do |form| %>
+        <%=form.text_field :setup %>  
+      <%= form.submit "Search" %>
+         <%end%> 
+<table>
+  <tr>
+    <th>Setup</th>
+    <th>punchline</th>
+    <th colspan="2"></th>
+  </tr>
+  <% @jokes.each do |jokes| %>
+    <tr>
+      <td><%= jokes.setup %></td>
+      <td><%= jokes.punchline %></td>
+      <td><%= link_to 'Edite', edit_user_path(jokes)%></td>
+      <td><%= link_to 'Destroy', user_path(jokes),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  <%= link_to "Store data base", users_store_api_data_path(@jokes) %>
+</table

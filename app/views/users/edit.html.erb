@@ -1,0 +1,10 @@
+
+<h1>Edite Store data </h1>
+<%debugger%>
+<%= form_with url: users_update_store_data_path(id: @joke.id), method: "post" do |form| %>
+   <%= form.label :setup, "setup:" %>
+   <%= form.text_field :setup %></br>
+   <%= form.label :punchline, "punchline:" %>
+    <%= form.text_field :punchline %></br>
+  <%= form.submit "Edit" %>
+<% end %>
